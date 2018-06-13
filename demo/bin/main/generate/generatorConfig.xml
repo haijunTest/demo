@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <context id="context1">
+  	<plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.example.demo.dal.myMapper.MyMapper"/>
+        </plugin>
+    <jdbcConnection connectionURL="jdbc:mysql://127.0.0.1:3306/sys?serverTimezone=GMT%2B8" 
+    				driverClass="com.mysql.jdbc.Driver" 
+    				password="Haijun521" userId="root" />
+    <javaModelGenerator targetPackage="com.example.demo.dal.model" targetProject="demo" />
+    <sqlMapGenerator targetPackage="com.example.demo.dal.xml" targetProject="demo" />
+    <javaClientGenerator targetPackage="com.example.demo.dal.mapper" targetProject="demo" type="XMLMAPPER" />
+    <table tableName="haijun_tbl_employee" schema="">
+      <columnOverride column="id" property="MySql" />
+    </table>
+  </context>
+</generatorConfiguration>
